@@ -17,8 +17,8 @@ nltk.download('stopwords', download_dir="/tmp")
 tokenizer = nltk.WordPunctTokenizer()
 stopword_list = nltk.corpus.stopwords.words('english')
 
-nlp = spacy.load("/opt/en_core_web_sm-2.2.5/en_core_web_sm/en_core_web_sm-2.2.5")
-#nlp = spacy.load("en_core_web_sm")
+#nlp = spacy.load("/opt/en_core_web_sm-2.2.5/en_core_web_sm/en_core_web_sm-2.2.5")
+nlp = spacy.load("en_core_web_sm")
 
 
 
