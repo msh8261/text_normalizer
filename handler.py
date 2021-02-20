@@ -1,7 +1,7 @@
 
-import json
 import nltk
 import spacy
+import json
 import unicodedata
 from common.contractions import CONTRACTION_MAP
 import re
