@@ -40,6 +40,7 @@ jobs:
       # Install all the app dependencies
       - name: Install dependencies
         run: pip3 install -r requirements.txt
+        run: python -m spacy download en_core_web_sm
 
 
       # Build the app and run tests
