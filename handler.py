@@ -7,18 +7,18 @@ from common.contractions import CONTRACTION_MAP
 import re
 from nltk.corpus import wordnet
 import collections
-#from textblob import Word
 from nltk.tokenize.toktok import ToktokTokenizer
 from bs4 import BeautifulSoup
 
 nltk.data.path.append("/tmp") 
 
-nltk.download('tagsets', download_dir="/tmp")
+#nltk.download('tagsets', download_dir="/tmp")
 nltk.download('stopwords', download_dir="/tmp")
 
 #tokenizer = ToktokTokenizer()
 tokenizer = nltk.WordPunctTokenizer()
 stopword_list = nltk.corpus.stopwords.words('english')
+
 nlp = spacy.load("/opt/en_core_web_sm-2.2.5/en_core_web_sm/en_core_web_sm-2.2.5")
 
 
@@ -33,9 +33,6 @@ def strip_html_tags(text):
         stripped_text = text
     return stripped_text
 
-
-#def correct_spellings_textblob(tokens):
-#   return [Word(token).correct() for token in tokens]  
 
 
 def simple_porter_stemming(text):
@@ -177,18 +174,18 @@ def lambda_handler(event, context):
 
 
 
-input_data =  {"body": ["US unveils world's most powerful supercomputer, beats China. " 
-               "The US has unveiled the world's most powerful supercomputer called 'Summit', " 
-               "beating the previous record-holder China's Sunway TaihuLight. With a peak performance "
-               "of 200,000 trillion calculations per second, it is over twice as fast as Sunway TaihuLight, "
-               "which is capable of 93,000 trillion calculations per second. Summit has 4,608 servers, "
-               "which reportedly take up the size of two tennis courts."    
-            ]
-        }
+# input_data =  {"body": ["US unveils world's most powerful supercomputer, beats China. " 
+#                "The US has unveiled the world's most powerful supercomputer called 'Summit', " 
+#                "beating the previous record-holder China's Sunway TaihuLight. With a peak performance "
+#                "of 200,000 trillion calculations per second, it is over twice as fast as Sunway TaihuLight, "
+#                "which is capable of 93,000 trillion calculations per second. Summit has 4,608 servers, "
+#                "which reportedly take up the size of two tennis courts."    
+#             ]
+#         }
 
 
-res = lambda_handler(input_data, "")
-print(res)
+# res = lambda_handler(input_data, "")
+# print(res)
 
 
 
