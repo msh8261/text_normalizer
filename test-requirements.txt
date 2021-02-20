@@ -1,5 +1,4 @@
 pytest
-lambda-decorators
 jsonschema
 moto
 boto3
