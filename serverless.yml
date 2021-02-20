@@ -24,7 +24,7 @@ package:
 
 functions:
   text-normalize:
-    handler: handler.normalize_corpus
+    handler: handler.lambda_handler
     events:
       - http:
           path: normalize

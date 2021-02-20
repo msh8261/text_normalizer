@@ -159,3 +159,25 @@ def normalize_corpus(corpus, html_stripping=True, contraction_expansion=True,
         normalized_corpus.append(doc)
         
     return normalized_corpus
+
+
+
+
+def lambda_handler(event, context):
+    corpus = event["body"]
+    norm_corpus = normalize_corpus(corpus)
+
+    return {
+        'statusCode': 200,
+        'body': json.dumps(norm_corpus.tolist())
+    }
+
+
+
+
+
+
+
+
+
+
