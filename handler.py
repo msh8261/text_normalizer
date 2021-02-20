@@ -15,7 +15,8 @@ nltk.data.path.append("/tmp")
 nltk.download('tagsets', download_dir="/tmp")
 nltk.download('stopwords', download_dir="/tmp")
 
-tokenizer = ToktokTokenizer()
+#tokenizer = ToktokTokenizer()
+tokenizer = nltk.WordPunctTokenizer()
 stopword_list = nltk.corpus.stopwords.words('english')
 nlp = spacy.load("/opt/en_core_web_sm-2.2.5/en_core_web_sm/en_core_web_sm-2.2.5", parse=True, tag=True, entity=True)
 
