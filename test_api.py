@@ -2,14 +2,12 @@ import requests
 import json
 
 
-input_data =  {"body": ['The sky is blue and beautiful.',
-                  'Love this blue and beautiful sky!',
-                  'The quick brown fox jumps over the lazy dog.',
-                  "A king's breakfast has sausages, ham, bacon, eggs, toast and beans",
-                  'I love green eggs, ham, sausages and bacon!',
-                  'The brown fox is quick and the blue dog is lazy!',
-                  'The sky is very blue and the sky is very beautiful today',
-                  'The dog is lazy but the brown fox is quick!'    
+input_data =  {"body": ["US unveils world's most powerful supercomputer, beats China. " 
+               "The US has unveiled the world's most powerful supercomputer called 'Summit', " 
+               "beating the previous record-holder China's Sunway TaihuLight. With a peak performance "
+               "of 200,000 trillion calculations per second, it is over twice as fast as Sunway TaihuLight, "
+               "which is capable of 93,000 trillion calculations per second. Summit has 4,608 servers, "
+               "which reportedly take up the size of two tennis courts."    
             ]
         }
 
