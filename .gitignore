@@ -1,0 +1,29 @@
+# Distribution / packaging
+.Python
+env/
+build/
+develop-eggs/
+dist/
+downloads/
+eggs/
+.eggs/
+lib/
+lib64/
+parts/
+sdist/
+var/
+*.egg-info/
+.installed.cfg
+*.egg
+node_modules
+# Serverless directories
+.serverless
+run_deploy.txt
+spacy_model_sm_lambda.zip
+layers/
+en_core_web_lg/
+en_core_web_sm-1.2.0/
+requirements0.txt
+
+
+
