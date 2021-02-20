@@ -125,9 +125,9 @@ def normalize_corpus(corpus, html_stripping=True, contraction_expansion=True,
         if contraction_expansion:
             doc = expand_contractions(doc)
 
-        # lemmatize text
-        if text_lemmatization:
-            doc = lemmatize_text(doc)
+        # # lemmatize text
+        # if text_lemmatization:
+        #     doc = lemmatize_text(doc)
 
         # stem text
         if text_stemming and not text_lemmatization:
