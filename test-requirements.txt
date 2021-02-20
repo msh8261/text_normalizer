@@ -1,0 +1,8 @@
+pytest
+lambda-decorators
+jsonschema
+moto
+boto3
+pytest-cov
+requests
+flake8
