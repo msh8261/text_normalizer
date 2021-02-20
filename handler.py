@@ -21,7 +21,6 @@ nlp = spacy.load('en', parse=True, tag=True, entity=True)
 # nlp_vec = spacy.load('en_vectors_web_lg', parse=True, tag=True, entity=True)
 
 
-
 def strip_html_tags(text):
     soup = BeautifulSoup(text, "html.parser")
     if bool(soup.find()):
