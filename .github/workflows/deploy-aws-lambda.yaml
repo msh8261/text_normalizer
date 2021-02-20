@@ -26,7 +26,6 @@ jobs:
       - name: Serverless Deploy
         run: npm run-script deploy
 
-jobs:
   build: 
     runs-on: ubuntu-latest
     strategy:
