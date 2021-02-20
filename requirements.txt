@@ -49,7 +49,6 @@ unicodedata2==13.0.0.post2
 urllib3==1.26.3
 wasabi==0.8.2
 wincertstore==0.2
-pytest
 flake8
 
 
