@@ -11,8 +11,7 @@ chardet==4.0.0
 click==7.1.2
 colorama==0.4.4
 contractions==0.0.48
-cymem==2.0.5
-en-core-web-sm 
+cymem==2.0.5 
 idna==2.10
 iniconfig==1.1.1
 Jinja2==2.11.3
