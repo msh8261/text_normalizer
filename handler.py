@@ -17,8 +17,7 @@ nltk.download('stopwords', download_dir="/tmp")
 
 tokenizer = ToktokTokenizer()
 stopword_list = nltk.corpus.stopwords.words('english')
-nlp = spacy.load('en', parse=True, tag=True, entity=True)
-# nlp_vec = spacy.load('en_vectors_web_lg', parse=True, tag=True, entity=True)
+nlp = spacy.load("/opt/en_core_web_sm-2.2.5/en_core_web_sm/en_core_web_sm-2.2.5", parse=True, tag=True, entity=True)
 
 
 def strip_html_tags(text):
