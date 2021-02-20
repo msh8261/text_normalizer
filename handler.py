@@ -11,8 +11,6 @@ from nltk.tokenize.toktok import ToktokTokenizer
 from bs4 import BeautifulSoup
 
 nltk.data.path.append("/tmp") 
-
-#nltk.download('tagsets', download_dir="/tmp")
 nltk.download('stopwords', download_dir="/tmp")
 
 #tokenizer = ToktokTokenizer()
@@ -20,6 +18,7 @@ tokenizer = nltk.WordPunctTokenizer()
 stopword_list = nltk.corpus.stopwords.words('english')
 
 nlp = spacy.load("/opt/en_core_web_sm-2.2.5/en_core_web_sm/en_core_web_sm-2.2.5")
+#nlp = spacy.load("en_core_web_sm")
 
 
 
@@ -125,9 +124,9 @@ def normalize_corpus(corpus, html_stripping=True, contraction_expansion=True,
         if contraction_expansion:
             doc = expand_contractions(doc)
 
-        # # lemmatize text
-        # if text_lemmatization:
-        #     doc = lemmatize_text(doc)
+        # lemmatize text
+        if text_lemmatization:
+            doc = lemmatize_text(doc)
 
         # stem text
         if text_stemming and not text_lemmatization:
