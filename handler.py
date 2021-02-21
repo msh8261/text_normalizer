@@ -154,7 +154,7 @@ def normalize_corpus(corpus, html_stripping=True, contraction_expansion=True,
         doc = re.sub(' +', ' ', doc)
         doc = doc.strip()
             
-        normalized_corpus.append(doc)
+        normalized_corpus.append([doc])
         
     return normalized_corpus
 
