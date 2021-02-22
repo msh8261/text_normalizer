@@ -1,3 +1,9 @@
+if __name__ == "__main__":
+    try:
+        import unzip_requirements
+    except ImportError:
+        pass
+
 
 import nltk
 import spacy
@@ -17,9 +23,12 @@ nltk.download('stopwords', download_dir="/tmp")
 tokenizer = nltk.WordPunctTokenizer()
 stopword_list = nltk.corpus.stopwords.words('english')
 
-nlp = spacy.load("/opt/en_core_web_sm-2.2.5/en_core_web_sm/en_core_web_sm-2.2.5")
-#nlp = spacy.load("en_core_web_sm")
+if spacy.load("en_core_web_sm"):
+    nlp = spacy.load("en_core_web_sm")
+else:    
+    nlp = spacy.load("/opt/en_core_web_sm-2.2.5/en_core_web_sm/en_core_web_sm-2.2.5")
 
+#nlp = spacy.load("en_core_web_sm")
 
 
 def strip_html_tags(text):
@@ -162,7 +171,7 @@ def normalize_corpus(corpus, html_stripping=True, contraction_expansion=True,
 
 
 def lambda_handler(event, context):
-    corpus = event["body"]
+    corpus = event['body']
     norm_corpus = normalize_corpus(corpus)
 
     return {

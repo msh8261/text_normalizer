@@ -1,1 +1,1 @@
-simple nltk-ci/cd
+serverless text normalize lambda aws
