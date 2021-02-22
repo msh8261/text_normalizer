@@ -196,6 +196,9 @@ def lambda_handler(event, context):
 # print(res["body"])
 
 
+# examples = 'Hello, my name is kaka, You saw my father. Prepare to see'
+# text = lemmatize_text((examples))
+# print(text)
 
 
 
