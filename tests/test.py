@@ -4,7 +4,7 @@ sys.path.append(os.path.abspath(os.path.join(os.path.dirname(__file__), '..')))
 
 import pytest
 
-from handler import *
+#from handler import *
 
 
 examples = 'Hello, my name is kaka, You saw my father. Prepare to see'
