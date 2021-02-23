@@ -1,65 +1,51 @@
 service: serverless-cicd2
+
 provider:
-	name: aws
-	runtime: python3.8
-	region: us-east-2
-	timeout: 60
-	memorySize: 1000
-	layers:    
-		- arn:aws:lambda:us-east-2:770693421928:layer:Klayers-python38-nltk:28
-		- arn:aws:lambda:us-east-2:770693421928:layer:Klayers-python38-spacy:41
-		- arn:aws:lambda:us-east-2:770693421928:layer:Klayers-python38-spacy_model_en_small:1
+  name: aws
+  runtime: python3.8
+  region: us-east-2
+  timeout: 60
+  memorySize: 1000
+  layers: 
+    - arn:aws:lambda:us-east-2:770693421928:layer:Klayers-python38-nltk:28
+    - arn:aws:lambda:us-east-2:770693421928:layer:Klayers-python38-spacy:41
+    - arn:aws:lambda:us-east-2:770693421928:layer:Klayers-python38-spacy_model_en_small:1
 
 
 custom:
-	pythonRequirements:
-		dockerizePip: true
-		zip: true
-		slim: true
-		strip: false
-		noDeploy:
-			- docutils
-			- jmespath
-			- pip
-			- python-dateutil
-			- setuptools
-			- six
-			- tensorboard
-		useStaticCache: true
-		useDownloadCache: true
-		cacheLocation: "./cache"
-package:
-	individually: false
-	exclude:
-		- package.json
-		- package-log.json
-		- node_modules/**
-		- cache/**
-		- test/**
-		- __pycache__/**
-		- .pytest_cache/**
-		- model/pytorch_model.bin
-		- raw/**
-		- .vscode/**
-		- .ipynb_checkpoints/**
-
+  pythonRequirements:
+    dockerizePip: true
+    zip: true
+    slim: true
+    strip: false
+    noDeploy:
+      - docutils
+      - jmespath
+      - pip
+      - python-dateutil
+      - setuptools
+      - six
+      - tensorboard
+    useStaticCache: true
+    useDownloadCache: true
+    cacheLocation: "./cache"
 
 package:
-	individually: false
-	exclude:
-		- package.json
-		- package-log.json
-		- node_modules/**
+  individually: false
+  exclude:
+    - package.json
+    - package-log.json
+    - node_modules/**
 
 functions:
-	text-normalize:
-		handler: handler.lambda_handler
-		timeout: 60
-		memorySize: 3008 
-		events:
-			- http:
-					path: normalize
-					method: post
+  text-normalize:
+    handler: handler.lambda_handler
+    timeout: 60
+    memorySize: 3008 
+    events:
+      - http:
+          path: normalize
+          method: post
 
 plugins:
-	- serverless-python-requirements
+  - serverless-python-requirements
