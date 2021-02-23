@@ -1,8 +1,7 @@
-
-try:
-    import unzip_requirements
-except ImportError:
-    pass
+# try:
+#     import unzip_requirements
+# except ImportError:
+#     pass
 
 
 import nltk
@@ -19,7 +18,7 @@ from bs4 import BeautifulSoup
 nltk.data.path.append("/tmp") 
 nltk.download('stopwords', download_dir="/tmp")
 
-#tokenizer = ToktokTokenizer()
+
 tokenizer = nltk.WordPunctTokenizer()
 stopword_list = nltk.corpus.stopwords.words('english')
 
@@ -28,7 +27,6 @@ if spacy.load("en_core_web_sm"):
 else:    
     nlp = spacy.load("/opt/en_core_web_sm-2.2.5/en_core_web_sm/en_core_web_sm-2.2.5")
 
-#nlp = spacy.load("en_core_web_sm")
 
 
 def strip_html_tags(text):
