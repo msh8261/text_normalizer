@@ -5,10 +5,10 @@ provider:
 	region: us-east-2
 	timeout: 60
 	memorySize: 1000
-	# layers:
-	#   - arn:aws:lambda:us-east-2:770693421928:layer:Klayers-python38-nltk:28
-	#   - arn:aws:lambda:us-east-2:770693421928:layer:Klayers-python38-spacy:41
-	#   - arn:aws:lambda:us-east-2:770693421928:layer:Klayers-python38-spacy_model_en_small:1
+	layers:
+	  - arn:aws:lambda:us-east-2:770693421928:layer:Klayers-python38-nltk:28
+	  - arn:aws:lambda:us-east-2:770693421928:layer:Klayers-python38-spacy:41
+	  - arn:aws:lambda:us-east-2:770693421928:layer:Klayers-python38-spacy_model_en_small:1
 
 
 custom:
