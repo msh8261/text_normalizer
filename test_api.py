@@ -19,24 +19,15 @@ input_data =  {"body": ["US unveils world's most powerful supercomputer, beats C
             ]
         }
 
-url = "https://y5umgtbrt0.execute-api.us-east-2.amazonaws.com/dev/normalize"
+url = ""
 
 
-#url = "https://q0cl1wwzb7.execute-api.us-east-2.amazonaws.com/dev/spacy"
 
-# url = "https://y5umgtbrt0.execute-api.us-east-2.amazonaws.com/dev/nltk"
 
 r = requests.post(url, json=input_data)
 print("result without securely key: ", r.json())
 
 
-
-# key = {'x-api-key': 'tI95Zb3Ikr5l8jK1o3DDN4BOzFDLi13y3GYZ5uDW'}
-
-
-# r = requests.post(url, json.dumps(input_data), headers=key)
-# res = json.loads(r.content)
-# print("result with securely key: ", res)
 
 
 
